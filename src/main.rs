@@ -1,5 +1,5 @@
 use std::fmt;
-const ERR_SVC: &str = "msg-pack-a049e3";
+const ERR_SVC: &str = "msg-pack-b49456";
 #[derive(Debug)]
 enum AppError { NotFound(String), Invalid(String), Internal(String) }
 impl fmt::Display for AppError { fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result { match self { Self::NotFound(id) => write!(f, "{} not found", id), Self::Invalid(msg) => write!(f, "invalid: {}", msg), Self::Internal(msg) => write!(f, "internal: {}", msg) } } }

